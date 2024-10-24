@@ -26,6 +26,11 @@
     "title": {
         "English": "Maxwell Survey",
         "Deutsch": "Maxwell Umfrage"
+    },
+    "not_allowed": {
+        "English": "you are not authorized to participate in the survey",
+        "Deutsch": "Sie sind nicht berechtigt, an der Umfrage teilzunehmen"
+
     }
 
 }

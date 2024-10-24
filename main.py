@@ -158,6 +158,9 @@ def main():
                         st.session_state['user'] = username
                         st.success('success')
                         st.rerun()
+                    
+                    else:
+                        st.error(texts['not_allowed'][lang])    
 
                 else:
                     st.error(texts['invalid_login'][lang])
