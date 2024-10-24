@@ -12,7 +12,7 @@ echo " "
 
 sqlite3 "$DB_PATH" "$COUNT_QUERY"
 
-echo "from 337 users answered"
+echo "of 337 users answered"
 echo " "
 echo "reading user data..."
 echo " "
