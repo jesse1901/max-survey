@@ -76,7 +76,6 @@ def main():
             ["English", "Deutsch"],
             key="language_selector",  # Optional: key to control state
             help="Select your preferred language.",  # Optional: tooltip
-            on_change=st.rerun
                 
                 )
     
@@ -85,7 +84,7 @@ def main():
         
         with open('question.json',  'r') as quest:
             question = json.load(quest)
-            survey_options = [message.format(user_name=user_name) for message in question["survey_options"][lang]]
+            options = [message.format(user_name=user_name) for message in question["survey_options"][lang]]
 
         left.title(f"{texts['title'][lang]}")
     
@@ -124,7 +123,6 @@ def main():
 
         with st.form("BeeGFS-Survey"):
             radio_question = texts['survey_question'][lang]
-            options = survey_options['survey_options'][lang]
             
             if previous_answer in options:
                 selected_index = options.index(previous_answer)
@@ -167,7 +165,4 @@ def main():
             st.error("")
 
 if __name__ == "__main__":
-    try:
         main()
-    except Exception as e:
-        st.error("An unexpected error occurred. Please try again later.")
