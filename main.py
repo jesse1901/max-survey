@@ -165,4 +165,7 @@ def main():
             st.error("")
 
 if __name__ == "__main__":
+    try:
         main()
+    except Exception as e:
+        st.error("An unexpected error occurred. Please try again later.")
