@@ -147,7 +147,6 @@ def main():
             
     else:
         st.title("Login BeeGFS Survey")
-        lang = "English"
         form = st.form(key="login_form")
         # Show login form if user is not authenticated
         username = form.text_input("Username")
@@ -161,7 +160,7 @@ def main():
                         st.rerun()
                     
                     else:
-                        st.error(texts['not_allowed'][lang])    
+                        st.error("you are not authorized to participate in the survey")    
 
                 else:
                     st.error(texts['invalid_login'][lang])
