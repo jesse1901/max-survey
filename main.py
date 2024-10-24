@@ -69,21 +69,25 @@ def main():
     
     # Check if user is already authenticated/
     if 'user' in st.session_state:
-        left, right = st.columns([3,1])
-        lang = right.selectbox(
-            "Language", 
-            ["English", "Deutsch"],
-            key="language_selector",  # Optional: key to control state
-            help="Select your preferred language."  # Optional: tooltip
-                )
-        left.title(f"{texts['title'][lang]}")
-    
         with open('texts.json', 'r') as t:
             texts = json.load(t)
 
         with open('question.json',  'r') as quest:
             question = json.load(quest)
             question = [message.format(user_name=user_name) for message in question["survey_options"][lang]]
+        
+        left, right = st.columns([3,1])
+        lang = right.selectbox(
+            "Language", 
+            ["English", "Deutsch"],
+            key="language_selector",  # Optional: key to control state
+            help="Select your preferred language.",  # Optional: tooltip
+            on_change=st.rerun
+                
+                )
+        left.title(f"{texts['title'][lang]}")
+    
+
 
         st.write('')
         st.write('')
