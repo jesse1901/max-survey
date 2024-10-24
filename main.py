@@ -161,9 +161,6 @@ def main():
                     
                     else:
                         st.error("you are not authorized to participate in the survey")    
-
-                else:
-                    st.error(texts['invalid_login'][lang])
         except Exception as e:
             st.error("")
 
