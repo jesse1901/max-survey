@@ -67,13 +67,6 @@ def main():
     st.set_page_config(page_title="Max-Survey")
     user_name = st.session_state.get('user', 'Unbekannter Benutzer')
     
-    with open('texts.json', 'r') as t:
-        texts = json.load(t)
-
-    with open('question.json',  'r') as quest:
-        question = json.load(quest)
-
-
     # Check if user is already authenticated/
     if 'user' in st.session_state:
         left, right = st.columns([3,1])
@@ -84,6 +77,13 @@ def main():
             help="Select your preferred language."  # Optional: tooltip
                 )
         left.title(f"{texts['title'][lang]}")
+    
+        with open('texts.json', 'r') as t:
+            texts = json.load(t)
+
+        with open('question.json',  'r') as quest:
+            question = json.load(quest)
+            question = [message.format(user_name=user_name) for message in question["survey_options"][lang]]
 
         st.write('')
         st.write('')
