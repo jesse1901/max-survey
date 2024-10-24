@@ -85,7 +85,7 @@ def main():
         
         with open('question.json',  'r') as quest:
             question = json.load(quest)
-            question = [message.format(user_name=user_name) for message in question["survey_options"][lang]]
+            survey_options = [message.format(user_name=user_name) for message in question["survey_options"][lang]]
 
         left.title(f"{texts['title'][lang]}")
     
@@ -124,7 +124,7 @@ def main():
 
         with st.form("BeeGFS-Survey"):
             radio_question = texts['survey_question'][lang]
-            options = question['survey_options'][lang]
+            options = survey_options['survey_options'][lang]
             
             if previous_answer in options:
                 selected_index = options.index(previous_answer)
