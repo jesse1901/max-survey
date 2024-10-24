@@ -1,0 +1,19 @@
+{
+    
+"question": {
+    "English": "As part of the migration from BeeGFS to DUST (https://docs.desy.de/maxwell/beegfs-migration/), the user directories will be moved from /beegfs/desy/user/ to /data/dust/user/. You have such a user directory and as preparation it is necessary that you answer the following question.",
+    "Deutsch": "Im Rahmen der Migration von BeeGFS auf DUST (https://docs.desy.de/maxwell/beegfs-migration/) werden die User-Verzeichnisse von /beegfs/desy/user/ nach /data/dust/user/ verschoben. Sie besitzen ein solches User-Verzeichnis und als Vorbereitung ist es notwendig, dass Sie die folgende Umfrage beantworten."
+},
+"survey_options": {
+    "English": [
+        "1. I currently do not need a directory in the DUST filespace. My BeeGFS directory /beegfs/desy/user/{user_name} can be deleted.",
+        "2. I need a directory in the DUST filespace. My data in the BeeGFS directory /beegfs/desy/user/{user_name} can be deleted, and the directory can be removed.",
+        "3. I need a directory in the DUST filespace. My data in the BeeGFS directory should be moved to the DUST user directory."
+    ],
+    "Deutsch": [
+        "1. Ich benötige aktuell kein Verzeichnis im DUST filespace. Mein BeeGFS Verzeichnis /beegfs/desy/user/{user_name} kann gelöscht werden.",
+        "2. Ich benötige ein Verzeichnis im DUST filespace. Meine Daten im BeeGFS Verzeichnis /beegfs/desy/user/{user_name} können gelöscht werden, und das Verzeichnis kann entfernt werden.",
+        "3. Ich benötige ein Verzeichnis im DUST filespace. Meine Daten im BeeGFS Verzeichnis sollen in das DUST User-Verzeichnis verschoben werden."
+    ]
+    }
+}

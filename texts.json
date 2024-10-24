@@ -1,0 +1,31 @@
+{
+    "welcome": {
+        "English": "Welcome,",
+        "Deutsch": "Willkommen,"
+    },
+    "login_successful": {
+        "English": "Login successful!",
+        "Deutsch": "Anmeldung erfolgreich!"
+    },
+    "invalid_login": {
+        "English": "Invalid username or password",
+        "Deutsch": "Ungültiger Benutzername oder Passwort"
+    },
+    "password_empty": {
+        "English": "Password cannot be empty",
+        "Deutsch": "Das Passwort darf nicht leer sein"
+    },
+    "survey_question": {
+        "English": "Please select one of the following answers:",
+        "Deutsch": "Bitte wählen Sie eine der folgenden Antworten aus:"
+    },
+    "your_response_recorded": {
+        "English": "Your answer has been saved successfully!",
+        "Deutsch": "Ihre Antwort wurde erfolgreich gespeichert!"
+    },
+    "title": {
+        "English": "Maxwell Survey",
+        "Deutsch": "Maxwell Umfrage"
+    }
+
+}
