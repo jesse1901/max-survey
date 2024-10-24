@@ -147,6 +147,7 @@ def main():
             
     else:
         st.title("Login BeeGFS Survey")
+        lang = "English"
         form = st.form(key="login_form")
         # Show login form if user is not authenticated
         username = form.text_input("Username")
